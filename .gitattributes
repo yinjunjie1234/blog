@@ -1,0 +1,21 @@
+# 统一换行符为 LF，避免 Windows 提交时把整个主题的换行改写、产生海量无意义 diff
+* text=auto eol=lf
+
+# 明确按二进制处理，防止任何换行转换损坏文件
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
+*.pdf  binary
+*.zip  binary
+
+# 构建产物与依赖不参与语言统计，避免 GitHub 把仓库判定成错误的语言
+node_modules/** linguist-vendored
+public/**       linguist-generated
+themes/**/source/css/** linguist-vendored

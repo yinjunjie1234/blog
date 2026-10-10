@@ -1,0 +1,12 @@
+# 已停用：个人博客站点不需要每日依赖更新 PR。
+# 原配置会对 npm 依赖每天开 PR（上限 20 个），而 Hexo 生态的
+# 自动升级（如 hexo-renderer-marked 大版本）极易导致构建失败。
+# 如需恢复，把下面几行的注释去掉即可。
+#
+# version: 2
+# updates:
+# - package-ecosystem: npm
+#   directory: "/"
+#   schedule:
+#     interval: daily
+#   open-pull-requests-limit: 20
