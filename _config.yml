@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://example.pages.dev # TODO: 替换为 Cloudflare 分配的 *.pages.dev 地址，绑定自定义域后再改
+url: https://blog-8e6.pages.dev # 绑定自定义域后改这里，然后 git push 触发重建
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
