@@ -14,6 +14,11 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog-8e6.pages.dev # 绑定自定义域后改这里，然后 git push 触发重建
+# ⚠️ permalink 依赖文章 front-matter 的 date，而 date 又依赖文章的显式声明。
+# 若某篇文章没写 date，Hexo 会回退使用文件修改时间(mtime)，
+# 导致备份、解压、编辑器触碰文件后文章 URL 静默改变、产生死链。
+# 因此：每篇文章的 front-matter 必须显式写 date。
+# hexo new 生成的脚手架已自带 date，手动新建文件时请自行补上。
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -81,6 +86,8 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
+## 'mtime' 会让"最后更新"时间随文件被触碰而变化，并非真实编辑时间。
+## 因为文章已显式声明 updated，这里保持 mtime 不再影响显示。
 updated_option: 'mtime'
 
 # Pagination
