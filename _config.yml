@@ -86,9 +86,10 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-## 'mtime' 会让"最后更新"时间随文件被触碰而变化，并非真实编辑时间。
-## 因为文章已显式声明 updated，这里保持 mtime 不再影响显示。
-updated_option: 'mtime'
+## 'mtime' 会让"最后更新"跟随文件被触碰的时间，覆盖文章显式声明的 updated，
+## 导致备份、解压、编辑器保存后凭空出现"更新于 <当天>"，且不可复现。
+## 'empty' 表示：文章写了 updated 就用文章的值，没写就不显示更新时间。
+updated_option: 'empty'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
