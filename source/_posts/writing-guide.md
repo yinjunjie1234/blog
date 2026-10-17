@@ -79,7 +79,7 @@ console.log(greet('世界'))
 ```yaml
 # YAML 同样支持
 site:
-  title: 尹俊杰de博客
+  title: 小黑de空间
   language: zh-CN
 ```
 
