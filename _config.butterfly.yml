@@ -45,8 +45,8 @@ favicon: /favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.png # 本地头像，不再依赖第三方图床
-  effect: true # 悬停时轻微旋转
+  img: /img/avatar.jpg # 本站头像（照片用 JPEG 体积更小）
+  effect: false # 照片头像不做旋转，避免悬停时变形观感
 
 # Disable all banner image
 disable_top_img: false
